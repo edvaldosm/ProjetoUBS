@@ -15,7 +15,7 @@
     <!--Rolling File Appender-->
     <appender name="File-Logger" class="ch.qos.logback.core.rolling.RollingFileAppender">
 
-        <file>${LOG_PATH}/camellog.log</file>
+        <file>${LOG_PATH}/projetoUbslog.log</file>
 
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>
@@ -28,7 +28,7 @@
                 ${LOG_PATH}/archived/log_%d{dd-MM-yyyy}.log
             </fileNamePattern>
             <maxHistory>10</maxHistory>
-            <totalSizeCap>100MB</totalSizeCap>
+            <totalSizeCap>10MB</totalSizeCap>
         </rollingPolicy>
 
     </appender>
