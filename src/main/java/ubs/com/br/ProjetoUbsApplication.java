@@ -10,4 +10,5 @@ public class ProjetoUbsApplication {
 		SpringApplication.run(ProjetoUbsApplication.class, args);
 	}
 
+
 }

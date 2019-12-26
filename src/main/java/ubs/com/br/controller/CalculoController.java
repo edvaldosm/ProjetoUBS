@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import ubs.com.br.domain.Product;
 import ubs.com.br.services.ServiceResponse;
 
-@Api(value = "pessoa", tags = "pessoa", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(value = "Calculo", tags = "Calculo", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 @ApiResponses(value = {
 		@ApiResponse(code = org.apache.http.HttpStatus.SC_BAD_REQUEST, message = "Quando a operação retornar '400 - Bad Request' será apresentado no corpo do "
 				+ "retorno o JSON abaixo com as mensagens de negócio apresentadas no campo \"messages\".", response = ServiceResponse.class),
@@ -28,7 +28,7 @@ import ubs.com.br.services.ServiceResponse;
 @Slf4j
 public class CalculoController {
 
-	@ApiOperation(value = "Método responsável por retornar uma lista de Pessoas.", nickname = "ListarPessoa")
+	@ApiOperation(value = "Método responsável por retornar o calculo de produtos", nickname = "CalculoProduto")
 
 	@ApiResponses(value = {
 			@ApiResponse(code = org.apache.http.HttpStatus.SC_OK, message = "Quando a operação ocorrer com sucesso será apresentado no corpo do "
@@ -39,7 +39,12 @@ public class CalculoController {
 
 		log.debug("Sigla emissor: {}", "Teste");
 
-		final ServiceResponse<Product> serviceResponse = null; // this.pessoaService.consultar(siglaEmissor, cnpjCpf);
+	
+		final ServiceResponse<Product> serviceResponse = new ServiceResponse<>(); // this.pessoaService.consultar(siglaEmissor, cnpjCpf);
+		serviceResponse.setStatus(org.springframework.http.HttpStatus.OK);
+		Product productObj = new Product();
+		productObj.setIndustry("Teste de Servico");
+		serviceResponse.setResult(productObj);
 
 		return new ResponseEntity<>(serviceResponse, HttpHeaders.EMPTY, serviceResponse.getStatus());
 	}
