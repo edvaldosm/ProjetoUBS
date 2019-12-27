@@ -13,7 +13,8 @@ spring:
     password: lilian31
     
 startRoute : timer:lerJson?period=10s
-
+fromRoute : file:data/input?delete=true&readLock=none&moveFailed=error
+toRoute1: file:data/output
 message: DEV - Ambiente
 
   
