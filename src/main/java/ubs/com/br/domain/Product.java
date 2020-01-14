@@ -10,8 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Data
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
+
 public class Product {
 
 	private String product;
