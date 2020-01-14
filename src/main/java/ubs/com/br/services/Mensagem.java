@@ -1,4 +1,4 @@
-package ubs.com.br;
+package ubs.com.br.services;
 
 import org.springframework.http.HttpStatus;
 

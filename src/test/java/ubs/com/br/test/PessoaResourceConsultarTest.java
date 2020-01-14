@@ -14,8 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import ubs.com.br.Mensagem;
 import ubs.com.br.controller.CalculoController;
+import ubs.com.br.services.Mensagem;
 import ubs.com.br.services.ServiceResponse;
 
 public class PessoaResourceConsultarTest {

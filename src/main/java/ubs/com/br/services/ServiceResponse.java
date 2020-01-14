@@ -18,7 +18,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import springfox.documentation.annotations.ApiIgnore;
-import ubs.com.br.Mensagem;
 	/**
 	 * Objeto genérico responsável pelo encapsulamento de retorno do serviço.
 	 * Possui um objeto genérico e uma lista de mensagens de retono.
