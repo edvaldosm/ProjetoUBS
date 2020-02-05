@@ -1,5 +1,7 @@
 package ubs.com.br;
 
+import java.text.MessageFormat;
+
 import org.springframework.http.HttpStatus;
 
 import lombok.Getter;
@@ -46,12 +48,13 @@ public enum Mensagem {
 	     * @return String
 	     *          Texto do enum de mensagem, com os devidos replaces.
 	     */
+	    @SuppressWarnings("el-syntax")
 	    public String show(String... params) {
 	        Integer i = 0;
 	        String retorno = this.descricao;
 
 	        for (String param : params) {
-	            retorno = retorno.replace("${" + i + "}", param);
+	            retorno = retorno.replace(MessageFormat.format("${{0}}", i), param);
 	            i += 1;
 	        }
 

@@ -4,6 +4,6 @@ databaseChangeLog:
       author: Edvaldo (generated)
       changes:
          addUniqueConstraint:
-            columnNames: product, type
+            columnNames: product, type, quantity
             constraintName: const_product_type
             tableName: Product

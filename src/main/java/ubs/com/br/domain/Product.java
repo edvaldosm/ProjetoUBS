@@ -1,8 +1,8 @@
 package ubs.com.br.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import java.math.BigDecimal;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,13 +10,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Data
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@Builder
 public class Product {
 
 	private String product;
-	private String quantity;
-	private String price;
+	private Integer quantity;
+	private BigDecimal price;
 	private String type;
 	private String industry;
 	private String origin;

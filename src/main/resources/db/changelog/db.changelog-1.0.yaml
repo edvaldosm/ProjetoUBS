@@ -14,7 +14,7 @@ databaseChangeLog:
                   type: bigint
             -  column:
                   name: product
-                  type: VARCHAR(15)
+                  type: VARCHAR(100)
             -  column:
                   name: quantity
                   type: int
@@ -23,11 +23,11 @@ databaseChangeLog:
                   type: numeric
             -  column:
                   name: type
-                  type: VARCHAR(10)
+                  type: VARCHAR(50)
             -  column:
                   name: industry
-                  type: VARCHAR(100)
+                  type: VARCHAR(200)
             -  column:
                   name: origin
-                  type: VARCHAR(2)
+                  type: VARCHAR(15)
             tableName: Product

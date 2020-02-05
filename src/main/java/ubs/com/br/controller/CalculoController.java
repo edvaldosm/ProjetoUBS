@@ -42,7 +42,7 @@ public class CalculoController {
 	
 		final ServiceResponse<Product> serviceResponse = new ServiceResponse<>(); // this.pessoaService.consultar(siglaEmissor, cnpjCpf);
 		serviceResponse.setStatus(org.springframework.http.HttpStatus.OK);
-		Product productObj = new Product();
+		Product productObj = null;
 		productObj.setIndustry("Teste de Servico");
 		serviceResponse.setResult(productObj);
 
