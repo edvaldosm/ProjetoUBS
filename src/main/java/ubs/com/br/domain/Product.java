@@ -1,3 +1,4 @@
+
 package ubs.com.br.domain;
 
 import java.math.BigDecimal;
@@ -11,6 +12,7 @@ import lombok.Setter;
 @Setter
 @Data
 @Builder
+
 public class Product {
 
 	private String product;
