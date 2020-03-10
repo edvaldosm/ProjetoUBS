@@ -42,8 +42,9 @@ public class CalculoController {
 	
 		final ServiceResponse<Product> serviceResponse = new ServiceResponse<>(); // this.pessoaService.consultar(siglaEmissor, cnpjCpf);
 		serviceResponse.setStatus(org.springframework.http.HttpStatus.OK);
-		Product productObj = null;
-		productObj.setIndustry("Teste de Servico");
+		Product productObj = Product.builder().
+							 industry("Teste de Servico").
+							 build();
 		serviceResponse.setResult(productObj);
 
 		return new ResponseEntity<>(serviceResponse, HttpHeaders.EMPTY, serviceResponse.getStatus());

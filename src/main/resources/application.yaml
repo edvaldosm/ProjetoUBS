@@ -8,7 +8,7 @@ spring:
   profiles: dev
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.199.131:5432/dbUBS
+    url: jdbc:postgresql://192.168.174.142:5432/dbUBS
     username: postgres
     password: lilian31
     
